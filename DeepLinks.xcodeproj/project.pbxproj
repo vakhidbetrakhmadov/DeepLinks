@@ -7,16 +7,329 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B0936AAA27BAF51B00D155A1 /* DeepLinks.h in Headers */ = {isa = PBXBuildFile; fileRef = B0936AA927BAF51B00D155A1 /* DeepLinks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B046373C27BD353700C60D4F /* ClosureDeepLinkHandlerForDeepLinkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046373B27BD353700C60D4F /* ClosureDeepLinkHandlerForDeepLinkFactory.swift */; };
+		B046373E27BD356200C60D4F /* DeepLinkHandlerForDeepLinkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046373D27BD356200C60D4F /* DeepLinkHandlerForDeepLinkFactory.swift */; };
+		B046374527BD441100C60D4F /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046374427BD441100C60D4F /* MainPresenter.swift */; };
+		B046374727BD443500C60D4F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046374627BD443500C60D4F /* MainView.swift */; };
+		B046374A27BD452E00C60D4F /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046374927BD452E00C60D4F /* MainAssembly.swift */; };
+		B046374C27BD456900C60D4F /* MainAssemblyImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046374B27BD456900C60D4F /* MainAssemblyImpl.swift */; };
+		B046374E27BD45CE00C60D4F /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046374D27BD45CE00C60D4F /* DisposeBag.swift */; };
+		B046375027BD4B7300C60D4F /* DefaultDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046374F27BD4B7300C60D4F /* DefaultDisposeBag.swift */; };
+		B046375227BD4B7E00C60D4F /* DisposeBagHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046375127BD4B7E00C60D4F /* DisposeBagHolder.swift */; };
+		B046375427BD4FEB00C60D4F /* MessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046375327BD4FEB00C60D4F /* MessageDisplayable.swift */; };
+		B046615427BD50A600C60D4F /* ActivityDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046615327BD50A600C60D4F /* ActivityDisplayable.swift */; };
+		B046615627BD50E300C60D4F /* DeepLinkCompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046615527BD50E300C60D4F /* DeepLinkCompletionHandler.swift */; };
+		B046615827BD665E00C60D4F /* DeepLinkCompletionArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046615727BD665E00C60D4F /* DeepLinkCompletionArgs.swift */; };
+		B046615A27BD673B00C60D4F /* WeakDeepLinkCompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046615927BD673B00C60D4F /* WeakDeepLinkCompletionHandler.swift */; };
+		B046615C27BD67C700C60D4F /* WeakMessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046615B27BD67C700C60D4F /* WeakMessageDisplayable.swift */; };
+		B046615E27BD6F0E00C60D4F /* WeakActivityDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046615D27BD6F0E00C60D4F /* WeakActivityDisplayable.swift */; };
+		B046616027BD756800C60D4F /* WeakDeepLinkHandlingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046615F27BD756800C60D4F /* WeakDeepLinkHandlingService.swift */; };
+		B05336C627C15322000F9FF1 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336C527C15322000F9FF1 /* URL+Extensions.swift */; };
+		B05336CF27C26130000F9FF1 /* DeepLinkUri+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336CE27C26130000F9FF1 /* DeepLinkUri+Extensions.swift */; };
+		B05336D127C26A72000F9FF1 /* DeepLinkHandlerForDeepLinkUriFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336D027C26A72000F9FF1 /* DeepLinkHandlerForDeepLinkUriFactoryImpl.swift */; };
+		B05336D327C26AD3000F9FF1 /* DeepLinkHandlerForDeepLinkFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336D227C26AD3000F9FF1 /* DeepLinkHandlerForDeepLinkFactoryImpl.swift */; };
+		B05336D527C2BDB2000F9FF1 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336D427C2BDB2000F9FF1 /* Dismissable.swift */; };
+		B05336D727C2BDE3000F9FF1 /* ClosureDismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336D627C2BDE3000F9FF1 /* ClosureDismissable.swift */; };
+		B05336D927C2BE75000F9FF1 /* NoopDismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336D827C2BE75000F9FF1 /* NoopDismissable.swift */; };
+		B05336DC27C2CA0A000F9FF1 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336DB27C2CA0A000F9FF1 /* MainInteractor.swift */; };
+		B05336DF27C2CA1D000F9FF1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336DE27C2CA1D000F9FF1 /* Item.swift */; };
+		B05336E127C2CBD5000F9FF1 /* ItemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336E027C2CBD5000F9FF1 /* ItemStatus.swift */; };
+		B05336E327C2CC49000F9FF1 /* ItemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336E227C2CC49000F9FF1 /* ItemsService.swift */; };
+		B05336E527C2CC50000F9FF1 /* ItemsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336E427C2CC50000F9FF1 /* ItemsServiceImpl.swift */; };
+		B05336E727C2CD38000F9FF1 /* MainInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336E627C2CD38000F9FF1 /* MainInteractorImpl.swift */; };
+		B05336EA27C2D32F000F9FF1 /* MainViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05336E927C2D32F000F9FF1 /* MainViewData.swift */; };
+		B053452327C3888D000F9FF1 /* BaseOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053452227C3888D000F9FF1 /* BaseOpener.swift */; };
+		B053452E27C38C22000F9FF1 /* ActiveItemAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053452D27C38C22000F9FF1 /* ActiveItemAssembly.swift */; };
+		B053453027C38C41000F9FF1 /* AssembledModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053452F27C38C41000F9FF1 /* AssembledModule.swift */; };
+		B053453227C38C91000F9FF1 /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053453127C38C91000F9FF1 /* MainModule.swift */; };
+		B053453427C38DA9000F9FF1 /* ActiveItemAssemblyImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053453327C38DA9000F9FF1 /* ActiveItemAssemblyImpl.swift */; };
+		B053453627C38F00000F9FF1 /* ActiveItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053453527C38F00000F9FF1 /* ActiveItemPresenter.swift */; };
+		B053453827C38F12000F9FF1 /* ActiveItemModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053453727C38F12000F9FF1 /* ActiveItemModule.swift */; };
+		B053453B27C38F28000F9FF1 /* ActiveItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053453A27C38F28000F9FF1 /* ActiveItemView.swift */; };
+		B053453D27C38F39000F9FF1 /* ActiveItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053453C27C38F39000F9FF1 /* ActiveItemViewController.swift */; };
+		B053454027C3920A000F9FF1 /* ActiveItemOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053453F27C3920A000F9FF1 /* ActiveItemOpener.swift */; };
+		B053454227C392B7000F9FF1 /* ActiveItemOpenerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053454127C392B7000F9FF1 /* ActiveItemOpenerImpl.swift */; };
+		B053454427C39748000F9FF1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053454327C39748000F9FF1 /* BaseViewController.swift */; };
+		B053454927C39B0C000F9FF1 /* InactiveItemAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053454827C39B0C000F9FF1 /* InactiveItemAssembly.swift */; };
+		B053454B27C39B15000F9FF1 /* InactiveItemAssemblyImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053454A27C39B15000F9FF1 /* InactiveItemAssemblyImpl.swift */; };
+		B053454D27C39B69000F9FF1 /* InactiveItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053454C27C39B69000F9FF1 /* InactiveItemView.swift */; };
+		B053454F27C39B74000F9FF1 /* InactiveItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053454E27C39B74000F9FF1 /* InactiveItemViewController.swift */; };
+		B053455127C39BA6000F9FF1 /* InactiveItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053455027C39BA6000F9FF1 /* InactiveItemPresenter.swift */; };
+		B053455327C39BB1000F9FF1 /* InactiveItemModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053455227C39BB1000F9FF1 /* InactiveItemModule.swift */; };
+		B053455527C39BF2000F9FF1 /* InactiveItemOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053455427C39BF2000F9FF1 /* InactiveItemOpener.swift */; };
+		B053455727C39C04000F9FF1 /* InactiveItemOpenerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053455627C39C04000F9FF1 /* InactiveItemOpenerImpl.swift */; };
+		B053455C27C39D4F000F9FF1 /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053455B27C39D4F000F9FF1 /* TermsView.swift */; };
+		B053455E27C39D78000F9FF1 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053455D27C39D78000F9FF1 /* TermsViewController.swift */; };
+		B053456027C39DAF000F9FF1 /* TermsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053455F27C39DAF000F9FF1 /* TermsPresenter.swift */; };
+		B053456227C39DBA000F9FF1 /* TermsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053456127C39DBA000F9FF1 /* TermsModule.swift */; };
+		B053456427C39E08000F9FF1 /* TermsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053456327C39E08000F9FF1 /* TermsAssembly.swift */; };
+		B053456627C39E0E000F9FF1 /* TermsAssemblyImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053456527C39E0E000F9FF1 /* TermsAssemblyImpl.swift */; };
+		B053456827C39F24000F9FF1 /* TermsOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053456727C39F24000F9FF1 /* TermsOpener.swift */; };
+		B053456A27C39FA4000F9FF1 /* TermsOpenerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053456927C39FA4000F9FF1 /* TermsOpenerImpl.swift */; };
+		B053456C27C3A012000F9FF1 /* TermsShowDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053456B27C3A012000F9FF1 /* TermsShowDeepLink.swift */; };
+		B053456E27C3A077000F9FF1 /* TermsShowDeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053456D27C3A077000F9FF1 /* TermsShowDeepLinkHandler.swift */; };
+		B07BF9E427C10D4F00DED8DB /* DeepLinkHandlerBuilderArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07BF9E327C10D4F00DED8DB /* DeepLinkHandlerBuilderArgs.swift */; };
+		B07BF9E627C10D5E00DED8DB /* DeepLinkHandlerDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07BF9E527C10D5E00DED8DB /* DeepLinkHandlerDependencies.swift */; };
+		B07BF9E827C10FB600DED8DB /* DeepLinkHandlerBuilderArgsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07BF9E727C10FB600DED8DB /* DeepLinkHandlerBuilderArgsFactory.swift */; };
+		B07BF9EA27C1173000DED8DB /* DeepLinksError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07BF9E927C1173000DED8DB /* DeepLinksError.swift */; };
+		B07BF9EC27C1176600DED8DB /* DependencyContainerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07BF9EB27C1176600DED8DB /* DependencyContainerError.swift */; };
+		B081F12427BD95AE0054A09E /* ContentReloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081F12327BD95AE0054A09E /* ContentReloadable.swift */; };
+		B081F7AF27BD96590054A09E /* WeakContentReloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081F7AE27BD96590054A09E /* WeakContentReloadable.swift */; };
+		B0936ACB27BAF60800D155A1 /* ClosureDeepLinkHandlerForDeepLinkUriFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AB227BAF60800D155A1 /* ClosureDeepLinkHandlerForDeepLinkUriFactory.swift */; };
+		B0936ACC27BAF60800D155A1 /* DeepLinkHandlerForDeepLinkUriFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AB327BAF60800D155A1 /* DeepLinkHandlerForDeepLinkUriFactory.swift */; };
+		B0936ACD27BAF60800D155A1 /* DeepLinkHandlingServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AB527BAF60800D155A1 /* DeepLinkHandlingServiceFactory.swift */; };
+		B0936ACE27BAF60800D155A1 /* DeepLinkHandlingServiceFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AB627BAF60800D155A1 /* DeepLinkHandlingServiceFactoryImpl.swift */; };
+		B0936ACF27BAF60800D155A1 /* DeepLinkHandlersRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AB827BAF60800D155A1 /* DeepLinkHandlersRegistrar.swift */; };
+		B0936AD027BAF60800D155A1 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AB927BAF60800D155A1 /* DeepLink.swift */; };
+		B0936AD127BAF60800D155A1 /* DeepLinkHandlersRegistrarHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936ABB27BAF60800D155A1 /* DeepLinkHandlersRegistrarHelperImpl.swift */; };
+		B0936AD227BAF60800D155A1 /* DeepLinkHandlersRegistrarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936ABC27BAF60800D155A1 /* DeepLinkHandlersRegistrarHelper.swift */; };
+		B0936AD327BAF60800D155A1 /* DeepLinkUri.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936ABD27BAF60800D155A1 /* DeepLinkUri.swift */; };
+		B0936AD427BAF60800D155A1 /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936ABE27BAF60800D155A1 /* DeepLinkHandler.swift */; };
+		B0936AD527BAF60800D155A1 /* DeepLinkHandlingServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AC027BAF60800D155A1 /* DeepLinkHandlingServiceImpl.swift */; };
+		B0936AD627BAF60800D155A1 /* DeepLinkHandlingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AC127BAF60800D155A1 /* DeepLinkHandlingService.swift */; };
+		B0936AD727BAF60800D155A1 /* DeepLinkHandlerFactoryRegistryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AC327BAF60800D155A1 /* DeepLinkHandlerFactoryRegistryImpl.swift */; };
+		B0936AD827BAF60800D155A1 /* DeepLinkHandlerFactoryRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AC427BAF60800D155A1 /* DeepLinkHandlerFactoryRegistry.swift */; };
+		B0936AED27BAF74900D155A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0936AEC27BAF74900D155A1 /* Assets.xcassets */; };
+		B0936AF027BAF74900D155A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0936AEE27BAF74900D155A1 /* LaunchScreen.storyboard */; };
+		B0936AF827BAF79000D155A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AF527BAF79000D155A1 /* SceneDelegate.swift */; };
+		B0936AF927BAF79000D155A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AF627BAF79000D155A1 /* MainViewController.swift */; };
+		B0936AFA27BAF79000D155A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AF727BAF79000D155A1 /* AppDelegate.swift */; };
+		B0936AFD27BAF8AC00D155A1 /* ItemShowDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AFC27BAF8AC00D155A1 /* ItemShowDeepLink.swift */; };
+		B0936B0A27BAF9C800D155A1 /* DeepLinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0936AA627BAF51B00D155A1 /* DeepLinks.framework */; };
+		B0936B0B27BAF9C800D155A1 /* DeepLinks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0936AA627BAF51B00D155A1 /* DeepLinks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0936B1227BAFB2200D155A1 /* ItemShowDeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936B1127BAFB2200D155A1 /* ItemShowDeepLinkHandler.swift */; };
+		B0936B1427BAFB3600D155A1 /* DeepLinkHandlersRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936B1327BAFB3600D155A1 /* DeepLinkHandlersRegistrar.swift */; };
+		B0936B1727BAFD1900D155A1 /* DeepLinkHandlersRegistrarsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936B1627BAFD1900D155A1 /* DeepLinkHandlersRegistrarsProvider.swift */; };
+		B0936B1F27BB009F00D155A1 /* DeepLinkHandlersRegistrarsProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936B1E27BB009F00D155A1 /* DeepLinkHandlersRegistrarsProviderImpl.swift */; };
+		B0936B2127BB014300D155A1 /* DeepLinkHandlersRegistrarProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936B2027BB014300D155A1 /* DeepLinkHandlersRegistrarProcessor.swift */; };
+		B0936B2327BB016600D155A1 /* DeepLinkHandlersRegistrarProcessorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936B2227BB016600D155A1 /* DeepLinkHandlersRegistrarProcessorImpl.swift */; };
+		B0936B2627BB023700D155A1 /* RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936B2527BB023700D155A1 /* RegisterDependencies.swift */; };
+		B0936B3427BB080100D155A1 /* DependencyContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0936B2E27BB080100D155A1 /* DependencyContainer.framework */; };
+		B0936B3527BB080100D155A1 /* DependencyContainer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0936B2E27BB080100D155A1 /* DependencyContainer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0936B3927BB084D00D155A1 /* DependencyContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0936B2E27BB080100D155A1 /* DependencyContainer.framework */; };
+		B0936B3F27BB086800D155A1 /* MakeDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936B2727BB073800D155A1 /* MakeDependencyContainer.swift */; };
+		B0936B4027BB086800D155A1 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AC727BAF60800D155A1 /* DependencyContainer.swift */; };
+		B0936B4127BB086800D155A1 /* DependencyContainerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AC827BAF60800D155A1 /* DependencyContainerImpl.swift */; };
+		B0936B4E27BB08F900D155A1 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0936B4827BB08F800D155A1 /* Core.framework */; };
+		B0936B4F27BB08F900D155A1 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0936B4827BB08F800D155A1 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0936B5527BB090D00D155A1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936ACA27BAF60800D155A1 /* String+Extensions.swift */; };
+		B0936B5627BB090D00D155A1 /* AnyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936AC527BAF60800D155A1 /* AnyType.swift */; };
+		B0936B5727BB092600D155A1 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0936B4827BB08F800D155A1 /* Core.framework */; };
+		B0936B5C27BB095F00D155A1 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0936B4827BB08F800D155A1 /* Core.framework */; };
+		B0936B5D27BB095F00D155A1 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0936B4827BB08F800D155A1 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0936B6227BB0A2C00D155A1 /* RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0936B6127BB0A2C00D155A1 /* RegisterDependencies.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B0936B0C27BAF9C900D155A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0936A9D27BAF51A00D155A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0936AA527BAF51A00D155A1;
+			remoteInfo = DeepLinks;
+		};
+		B0936B3227BB080100D155A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0936A9D27BAF51A00D155A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0936B2D27BB080100D155A1;
+			remoteInfo = DependencyContainer;
+		};
+		B0936B3B27BB084D00D155A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0936A9D27BAF51A00D155A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0936B2D27BB080100D155A1;
+			remoteInfo = DependencyContainer;
+		};
+		B0936B4C27BB08F900D155A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0936A9D27BAF51A00D155A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0936B4727BB08F800D155A1;
+			remoteInfo = Core;
+		};
+		B0936B5927BB092600D155A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0936A9D27BAF51A00D155A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0936B4727BB08F800D155A1;
+			remoteInfo = Core;
+		};
+		B0936B5E27BB095F00D155A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0936A9D27BAF51A00D155A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0936B4727BB08F800D155A1;
+			remoteInfo = Core;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B0936B0E27BAF9C900D155A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B0936B0B27BAF9C800D155A1 /* DeepLinks.framework in Embed Frameworks */,
+				B0936B4F27BB08F900D155A1 /* Core.framework in Embed Frameworks */,
+				B0936B3527BB080100D155A1 /* DependencyContainer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936B6027BB096000D155A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B0936B5D27BB095F00D155A1 /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B046373B27BD353700C60D4F /* ClosureDeepLinkHandlerForDeepLinkFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureDeepLinkHandlerForDeepLinkFactory.swift; sourceTree = "<group>"; };
+		B046373D27BD356200C60D4F /* DeepLinkHandlerForDeepLinkFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlerForDeepLinkFactory.swift; sourceTree = "<group>"; };
+		B046374427BD441100C60D4F /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		B046374627BD443500C60D4F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B046374927BD452E00C60D4F /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		B046374B27BD456900C60D4F /* MainAssemblyImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssemblyImpl.swift; sourceTree = "<group>"; };
+		B046374D27BD45CE00C60D4F /* DisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
+		B046374F27BD4B7300C60D4F /* DefaultDisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDisposeBag.swift; sourceTree = "<group>"; };
+		B046375127BD4B7E00C60D4F /* DisposeBagHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBagHolder.swift; sourceTree = "<group>"; };
+		B046375327BD4FEB00C60D4F /* MessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDisplayable.swift; sourceTree = "<group>"; };
+		B046615327BD50A600C60D4F /* ActivityDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDisplayable.swift; sourceTree = "<group>"; };
+		B046615527BD50E300C60D4F /* DeepLinkCompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkCompletionHandler.swift; sourceTree = "<group>"; };
+		B046615727BD665E00C60D4F /* DeepLinkCompletionArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkCompletionArgs.swift; sourceTree = "<group>"; };
+		B046615927BD673B00C60D4F /* WeakDeepLinkCompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakDeepLinkCompletionHandler.swift; sourceTree = "<group>"; };
+		B046615B27BD67C700C60D4F /* WeakMessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakMessageDisplayable.swift; sourceTree = "<group>"; };
+		B046615D27BD6F0E00C60D4F /* WeakActivityDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakActivityDisplayable.swift; sourceTree = "<group>"; };
+		B046615F27BD756800C60D4F /* WeakDeepLinkHandlingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakDeepLinkHandlingService.swift; sourceTree = "<group>"; };
+		B05336C527C15322000F9FF1 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		B05336CE27C26130000F9FF1 /* DeepLinkUri+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeepLinkUri+Extensions.swift"; sourceTree = "<group>"; };
+		B05336D027C26A72000F9FF1 /* DeepLinkHandlerForDeepLinkUriFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlerForDeepLinkUriFactoryImpl.swift; sourceTree = "<group>"; };
+		B05336D227C26AD3000F9FF1 /* DeepLinkHandlerForDeepLinkFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlerForDeepLinkFactoryImpl.swift; sourceTree = "<group>"; };
+		B05336D427C2BDB2000F9FF1 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
+		B05336D627C2BDE3000F9FF1 /* ClosureDismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureDismissable.swift; sourceTree = "<group>"; };
+		B05336D827C2BE75000F9FF1 /* NoopDismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoopDismissable.swift; sourceTree = "<group>"; };
+		B05336DB27C2CA0A000F9FF1 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		B05336DE27C2CA1D000F9FF1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B05336E027C2CBD5000F9FF1 /* ItemStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStatus.swift; sourceTree = "<group>"; };
+		B05336E227C2CC49000F9FF1 /* ItemsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsService.swift; sourceTree = "<group>"; };
+		B05336E427C2CC50000F9FF1 /* ItemsServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsServiceImpl.swift; sourceTree = "<group>"; };
+		B05336E627C2CD38000F9FF1 /* MainInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorImpl.swift; sourceTree = "<group>"; };
+		B05336E927C2D32F000F9FF1 /* MainViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewData.swift; sourceTree = "<group>"; };
+		B053452227C3888D000F9FF1 /* BaseOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOpener.swift; sourceTree = "<group>"; };
+		B053452D27C38C22000F9FF1 /* ActiveItemAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveItemAssembly.swift; sourceTree = "<group>"; };
+		B053452F27C38C41000F9FF1 /* AssembledModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembledModule.swift; sourceTree = "<group>"; };
+		B053453127C38C91000F9FF1 /* MainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
+		B053453327C38DA9000F9FF1 /* ActiveItemAssemblyImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveItemAssemblyImpl.swift; sourceTree = "<group>"; };
+		B053453527C38F00000F9FF1 /* ActiveItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveItemPresenter.swift; sourceTree = "<group>"; };
+		B053453727C38F12000F9FF1 /* ActiveItemModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveItemModule.swift; sourceTree = "<group>"; };
+		B053453A27C38F28000F9FF1 /* ActiveItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveItemView.swift; sourceTree = "<group>"; };
+		B053453C27C38F39000F9FF1 /* ActiveItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveItemViewController.swift; sourceTree = "<group>"; };
+		B053453F27C3920A000F9FF1 /* ActiveItemOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveItemOpener.swift; sourceTree = "<group>"; };
+		B053454127C392B7000F9FF1 /* ActiveItemOpenerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveItemOpenerImpl.swift; sourceTree = "<group>"; };
+		B053454327C39748000F9FF1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B053454827C39B0C000F9FF1 /* InactiveItemAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveItemAssembly.swift; sourceTree = "<group>"; };
+		B053454A27C39B15000F9FF1 /* InactiveItemAssemblyImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveItemAssemblyImpl.swift; sourceTree = "<group>"; };
+		B053454C27C39B69000F9FF1 /* InactiveItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveItemView.swift; sourceTree = "<group>"; };
+		B053454E27C39B74000F9FF1 /* InactiveItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveItemViewController.swift; sourceTree = "<group>"; };
+		B053455027C39BA6000F9FF1 /* InactiveItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveItemPresenter.swift; sourceTree = "<group>"; };
+		B053455227C39BB1000F9FF1 /* InactiveItemModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveItemModule.swift; sourceTree = "<group>"; };
+		B053455427C39BF2000F9FF1 /* InactiveItemOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveItemOpener.swift; sourceTree = "<group>"; };
+		B053455627C39C04000F9FF1 /* InactiveItemOpenerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveItemOpenerImpl.swift; sourceTree = "<group>"; };
+		B053455B27C39D4F000F9FF1 /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
+		B053455D27C39D78000F9FF1 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		B053455F27C39DAF000F9FF1 /* TermsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsPresenter.swift; sourceTree = "<group>"; };
+		B053456127C39DBA000F9FF1 /* TermsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsModule.swift; sourceTree = "<group>"; };
+		B053456327C39E08000F9FF1 /* TermsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAssembly.swift; sourceTree = "<group>"; };
+		B053456527C39E0E000F9FF1 /* TermsAssemblyImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAssemblyImpl.swift; sourceTree = "<group>"; };
+		B053456727C39F24000F9FF1 /* TermsOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOpener.swift; sourceTree = "<group>"; };
+		B053456927C39FA4000F9FF1 /* TermsOpenerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOpenerImpl.swift; sourceTree = "<group>"; };
+		B053456B27C3A012000F9FF1 /* TermsShowDeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsShowDeepLink.swift; sourceTree = "<group>"; };
+		B053456D27C3A077000F9FF1 /* TermsShowDeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsShowDeepLinkHandler.swift; sourceTree = "<group>"; };
+		B07BF9E327C10D4F00DED8DB /* DeepLinkHandlerBuilderArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlerBuilderArgs.swift; sourceTree = "<group>"; };
+		B07BF9E527C10D5E00DED8DB /* DeepLinkHandlerDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlerDependencies.swift; sourceTree = "<group>"; };
+		B07BF9E727C10FB600DED8DB /* DeepLinkHandlerBuilderArgsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlerBuilderArgsFactory.swift; sourceTree = "<group>"; };
+		B07BF9E927C1173000DED8DB /* DeepLinksError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinksError.swift; sourceTree = "<group>"; };
+		B07BF9EB27C1176600DED8DB /* DependencyContainerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerError.swift; sourceTree = "<group>"; };
+		B081F12327BD95AE0054A09E /* ContentReloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentReloadable.swift; sourceTree = "<group>"; };
+		B081F7AE27BD96590054A09E /* WeakContentReloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakContentReloadable.swift; sourceTree = "<group>"; };
 		B0936AA627BAF51B00D155A1 /* DeepLinks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeepLinks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0936AA927BAF51B00D155A1 /* DeepLinks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeepLinks.h; sourceTree = "<group>"; };
+		B0936AB227BAF60800D155A1 /* ClosureDeepLinkHandlerForDeepLinkUriFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureDeepLinkHandlerForDeepLinkUriFactory.swift; sourceTree = "<group>"; };
+		B0936AB327BAF60800D155A1 /* DeepLinkHandlerForDeepLinkUriFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlerForDeepLinkUriFactory.swift; sourceTree = "<group>"; };
+		B0936AB527BAF60800D155A1 /* DeepLinkHandlingServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlingServiceFactory.swift; sourceTree = "<group>"; };
+		B0936AB627BAF60800D155A1 /* DeepLinkHandlingServiceFactoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlingServiceFactoryImpl.swift; sourceTree = "<group>"; };
+		B0936AB827BAF60800D155A1 /* DeepLinkHandlersRegistrar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlersRegistrar.swift; sourceTree = "<group>"; };
+		B0936AB927BAF60800D155A1 /* DeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
+		B0936ABB27BAF60800D155A1 /* DeepLinkHandlersRegistrarHelperImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlersRegistrarHelperImpl.swift; sourceTree = "<group>"; };
+		B0936ABC27BAF60800D155A1 /* DeepLinkHandlersRegistrarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlersRegistrarHelper.swift; sourceTree = "<group>"; };
+		B0936ABD27BAF60800D155A1 /* DeepLinkUri.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkUri.swift; sourceTree = "<group>"; };
+		B0936ABE27BAF60800D155A1 /* DeepLinkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
+		B0936AC027BAF60800D155A1 /* DeepLinkHandlingServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlingServiceImpl.swift; sourceTree = "<group>"; };
+		B0936AC127BAF60800D155A1 /* DeepLinkHandlingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlingService.swift; sourceTree = "<group>"; };
+		B0936AC327BAF60800D155A1 /* DeepLinkHandlerFactoryRegistryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlerFactoryRegistryImpl.swift; sourceTree = "<group>"; };
+		B0936AC427BAF60800D155A1 /* DeepLinkHandlerFactoryRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlerFactoryRegistry.swift; sourceTree = "<group>"; };
+		B0936AC527BAF60800D155A1 /* AnyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyType.swift; sourceTree = "<group>"; };
+		B0936AC727BAF60800D155A1 /* DependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		B0936AC827BAF60800D155A1 /* DependencyContainerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainerImpl.swift; sourceTree = "<group>"; };
+		B0936ACA27BAF60800D155A1 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B0936AE127BAF74500D155A1 /* DeepLinksDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepLinksDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0936AEC27BAF74900D155A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0936AEF27BAF74900D155A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0936AF127BAF74900D155A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0936AF527BAF79000D155A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B0936AF627BAF79000D155A1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B0936AF727BAF79000D155A1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B0936AFC27BAF8AC00D155A1 /* ItemShowDeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShowDeepLink.swift; sourceTree = "<group>"; };
+		B0936B1127BAFB2200D155A1 /* ItemShowDeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShowDeepLinkHandler.swift; sourceTree = "<group>"; };
+		B0936B1327BAFB3600D155A1 /* DeepLinkHandlersRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlersRegistrar.swift; sourceTree = "<group>"; };
+		B0936B1627BAFD1900D155A1 /* DeepLinkHandlersRegistrarsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlersRegistrarsProvider.swift; sourceTree = "<group>"; };
+		B0936B1E27BB009F00D155A1 /* DeepLinkHandlersRegistrarsProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlersRegistrarsProviderImpl.swift; sourceTree = "<group>"; };
+		B0936B2027BB014300D155A1 /* DeepLinkHandlersRegistrarProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlersRegistrarProcessor.swift; sourceTree = "<group>"; };
+		B0936B2227BB016600D155A1 /* DeepLinkHandlersRegistrarProcessorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandlersRegistrarProcessorImpl.swift; sourceTree = "<group>"; };
+		B0936B2527BB023700D155A1 /* RegisterDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDependencies.swift; sourceTree = "<group>"; };
+		B0936B2727BB073800D155A1 /* MakeDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDependencyContainer.swift; sourceTree = "<group>"; };
+		B0936B2E27BB080100D155A1 /* DependencyContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0936B4827BB08F800D155A1 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0936B6127BB0A2C00D155A1 /* RegisterDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B0936AA327BAF51A00D155A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0936B3927BB084D00D155A1 /* DependencyContainer.framework in Frameworks */,
+				B0936B5C27BB095F00D155A1 /* Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936ADE27BAF74500D155A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0936B0A27BAF9C800D155A1 /* DeepLinks.framework in Frameworks */,
+				B0936B4E27BB08F900D155A1 /* Core.framework in Frameworks */,
+				B0936B3427BB080100D155A1 /* DependencyContainer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936B2B27BB080100D155A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0936B5727BB092600D155A1 /* Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936B4527BB08F800D155A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -26,11 +339,214 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B046374127BD433D00C60D4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B046374627BD443500C60D4F /* MainView.swift */,
+				B05336E927C2D32F000F9FF1 /* MainViewData.swift */,
+				B0936AF627BAF79000D155A1 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B046374227BD434200C60D4F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B053453127C38C91000F9FF1 /* MainModule.swift */,
+				B046374427BD441100C60D4F /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B046374827BD452400C60D4F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				B046374927BD452E00C60D4F /* MainAssembly.swift */,
+				B046374B27BD456900C60D4F /* MainAssemblyImpl.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B05336C727C157D8000F9FF1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B05336E227C2CC49000F9FF1 /* ItemsService.swift */,
+				B05336E427C2CC50000F9FF1 /* ItemsServiceImpl.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B05336DA27C2C7D6000F9FF1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B05336DB27C2CA0A000F9FF1 /* MainInteractor.swift */,
+				B05336E627C2CD38000F9FF1 /* MainInteractorImpl.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B05336DD27C2CA13000F9FF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B05336DE27C2CA1D000F9FF1 /* Item.swift */,
+				B05336E027C2CBD5000F9FF1 /* ItemStatus.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B053452427C38B20000F9FF1 /* ActiveItem */ = {
+			isa = PBXGroup;
+			children = (
+				B053452927C38B61000F9FF1 /* Assembly */,
+				B053453927C38F1F000F9FF1 /* View */,
+				B053452A27C38B69000F9FF1 /* Presenter */,
+			);
+			path = ActiveItem;
+			sourceTree = "<group>";
+		};
+		B053452727C38B42000F9FF1 /* InactiveItem */ = {
+			isa = PBXGroup;
+			children = (
+				B053454527C39A67000F9FF1 /* Assembly */,
+				B053454627C39AA1000F9FF1 /* Presenter */,
+				B053454727C39AA7000F9FF1 /* View */,
+			);
+			path = InactiveItem;
+			sourceTree = "<group>";
+		};
+		B053452827C38B52000F9FF1 /* Terms */ = {
+			isa = PBXGroup;
+			children = (
+				B053455A27C39D46000F9FF1 /* View */,
+				B053455827C39D1C000F9FF1 /* Assembly */,
+				B053455927C39D24000F9FF1 /* Presenter */,
+			);
+			path = Terms;
+			sourceTree = "<group>";
+		};
+		B053452927C38B61000F9FF1 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				B053452D27C38C22000F9FF1 /* ActiveItemAssembly.swift */,
+				B053453327C38DA9000F9FF1 /* ActiveItemAssemblyImpl.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B053452A27C38B69000F9FF1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B053453527C38F00000F9FF1 /* ActiveItemPresenter.swift */,
+				B053453727C38F12000F9FF1 /* ActiveItemModule.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B053452B27C38B77000F9FF1 /* AppSetup */ = {
+			isa = PBXGroup;
+			children = (
+				B0936B6127BB0A2C00D155A1 /* RegisterDependencies.swift */,
+				B0936B1627BAFD1900D155A1 /* DeepLinkHandlersRegistrarsProvider.swift */,
+				B0936B1E27BB009F00D155A1 /* DeepLinkHandlersRegistrarsProviderImpl.swift */,
+			);
+			path = AppSetup;
+			sourceTree = "<group>";
+		};
+		B053452C27C38B9C000F9FF1 /* AppHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				B053452227C3888D000F9FF1 /* BaseOpener.swift */,
+				B053452F27C38C41000F9FF1 /* AssembledModule.swift */,
+				B053454327C39748000F9FF1 /* BaseViewController.swift */,
+			);
+			path = AppHelpers;
+			sourceTree = "<group>";
+		};
+		B053453927C38F1F000F9FF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B053453A27C38F28000F9FF1 /* ActiveItemView.swift */,
+				B053453C27C38F39000F9FF1 /* ActiveItemViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B053453E27C391EC000F9FF1 /* Openers */ = {
+			isa = PBXGroup;
+			children = (
+				B053453F27C3920A000F9FF1 /* ActiveItemOpener.swift */,
+				B053454127C392B7000F9FF1 /* ActiveItemOpenerImpl.swift */,
+				B053455427C39BF2000F9FF1 /* InactiveItemOpener.swift */,
+				B053455627C39C04000F9FF1 /* InactiveItemOpenerImpl.swift */,
+				B053456727C39F24000F9FF1 /* TermsOpener.swift */,
+				B053456927C39FA4000F9FF1 /* TermsOpenerImpl.swift */,
+			);
+			path = Openers;
+			sourceTree = "<group>";
+		};
+		B053454527C39A67000F9FF1 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				B053454827C39B0C000F9FF1 /* InactiveItemAssembly.swift */,
+				B053454A27C39B15000F9FF1 /* InactiveItemAssemblyImpl.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B053454627C39AA1000F9FF1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B053455027C39BA6000F9FF1 /* InactiveItemPresenter.swift */,
+				B053455227C39BB1000F9FF1 /* InactiveItemModule.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B053454727C39AA7000F9FF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B053454C27C39B69000F9FF1 /* InactiveItemView.swift */,
+				B053454E27C39B74000F9FF1 /* InactiveItemViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B053455827C39D1C000F9FF1 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				B053456327C39E08000F9FF1 /* TermsAssembly.swift */,
+				B053456527C39E0E000F9FF1 /* TermsAssemblyImpl.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B053455927C39D24000F9FF1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B053455F27C39DAF000F9FF1 /* TermsPresenter.swift */,
+				B053456127C39DBA000F9FF1 /* TermsModule.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B053455A27C39D46000F9FF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B053455B27C39D4F000F9FF1 /* TermsView.swift */,
+				B053455D27C39D78000F9FF1 /* TermsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B0936A9C27BAF51A00D155A1 = {
 			isa = PBXGroup;
 			children = (
+				B0936B4927BB08F800D155A1 /* Core */,
+				B0936B2F27BB080100D155A1 /* DependencyContainer */,
 				B0936AA827BAF51B00D155A1 /* DeepLinks */,
+				B0936AE227BAF74500D155A1 /* DeepLinksDemo */,
 				B0936AA727BAF51B00D155A1 /* Products */,
+				B0936AFE27BAF8CB00D155A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -38,6 +554,9 @@
 			isa = PBXGroup;
 			children = (
 				B0936AA627BAF51B00D155A1 /* DeepLinks.framework */,
+				B0936AE127BAF74500D155A1 /* DeepLinksDemo.app */,
+				B0936B2E27BB080100D155A1 /* DependencyContainer.framework */,
+				B0936B4827BB08F800D155A1 /* Core.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -45,9 +564,139 @@
 		B0936AA827BAF51B00D155A1 /* DeepLinks */ = {
 			isa = PBXGroup;
 			children = (
-				B0936AA927BAF51B00D155A1 /* DeepLinks.h */,
+				B0936AB227BAF60800D155A1 /* ClosureDeepLinkHandlerForDeepLinkUriFactory.swift */,
+				B046373B27BD353700C60D4F /* ClosureDeepLinkHandlerForDeepLinkFactory.swift */,
+				B0936AB927BAF60800D155A1 /* DeepLink.swift */,
+				B07BF9E927C1173000DED8DB /* DeepLinksError.swift */,
+				B0936ABE27BAF60800D155A1 /* DeepLinkHandler.swift */,
+				B0936AB327BAF60800D155A1 /* DeepLinkHandlerForDeepLinkUriFactory.swift */,
+				B05336D227C26AD3000F9FF1 /* DeepLinkHandlerForDeepLinkFactoryImpl.swift */,
+				B05336D027C26A72000F9FF1 /* DeepLinkHandlerForDeepLinkUriFactoryImpl.swift */,
+				B046373D27BD356200C60D4F /* DeepLinkHandlerForDeepLinkFactory.swift */,
+				B0936AC427BAF60800D155A1 /* DeepLinkHandlerFactoryRegistry.swift */,
+				B0936AC327BAF60800D155A1 /* DeepLinkHandlerFactoryRegistryImpl.swift */,
+				B0936AB827BAF60800D155A1 /* DeepLinkHandlersRegistrar.swift */,
+				B0936ABC27BAF60800D155A1 /* DeepLinkHandlersRegistrarHelper.swift */,
+				B07BF9E527C10D5E00DED8DB /* DeepLinkHandlerDependencies.swift */,
+				B07BF9E327C10D4F00DED8DB /* DeepLinkHandlerBuilderArgs.swift */,
+				B0936ABB27BAF60800D155A1 /* DeepLinkHandlersRegistrarHelperImpl.swift */,
+				B0936AC127BAF60800D155A1 /* DeepLinkHandlingService.swift */,
+				B046615F27BD756800C60D4F /* WeakDeepLinkHandlingService.swift */,
+				B0936AB527BAF60800D155A1 /* DeepLinkHandlingServiceFactory.swift */,
+				B0936AB627BAF60800D155A1 /* DeepLinkHandlingServiceFactoryImpl.swift */,
+				B0936AC027BAF60800D155A1 /* DeepLinkHandlingServiceImpl.swift */,
+				B07BF9E727C10FB600DED8DB /* DeepLinkHandlerBuilderArgsFactory.swift */,
+				B0936ABD27BAF60800D155A1 /* DeepLinkUri.swift */,
+				B0936B2027BB014300D155A1 /* DeepLinkHandlersRegistrarProcessor.swift */,
+				B0936B2227BB016600D155A1 /* DeepLinkHandlersRegistrarProcessorImpl.swift */,
+				B0936B2527BB023700D155A1 /* RegisterDependencies.swift */,
+				B046615527BD50E300C60D4F /* DeepLinkCompletionHandler.swift */,
+				B046615927BD673B00C60D4F /* WeakDeepLinkCompletionHandler.swift */,
+				B046615727BD665E00C60D4F /* DeepLinkCompletionArgs.swift */,
+				B05336CE27C26130000F9FF1 /* DeepLinkUri+Extensions.swift */,
 			);
 			path = DeepLinks;
+			sourceTree = "<group>";
+		};
+		B0936AE227BAF74500D155A1 /* DeepLinksDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B0936AF527BAF79000D155A1 /* SceneDelegate.swift */,
+				B0936AF727BAF79000D155A1 /* AppDelegate.swift */,
+				B053452B27C38B77000F9FF1 /* AppSetup */,
+				B053452C27C38B9C000F9FF1 /* AppHelpers */,
+				B0936AFB27BAF89A00D155A1 /* CoreFeature */,
+				B0936AEC27BAF74900D155A1 /* Assets.xcassets */,
+				B0936AEE27BAF74900D155A1 /* LaunchScreen.storyboard */,
+				B0936AF127BAF74900D155A1 /* Info.plist */,
+			);
+			path = DeepLinksDemo;
+			sourceTree = "<group>";
+		};
+		B0936AFB27BAF89A00D155A1 /* CoreFeature */ = {
+			isa = PBXGroup;
+			children = (
+				B0936B1327BAFB3600D155A1 /* DeepLinkHandlersRegistrar.swift */,
+				B053453E27C391EC000F9FF1 /* Openers */,
+				B05336DD27C2CA13000F9FF1 /* Models */,
+				B0936B1A27BAFE8200D155A1 /* DeepLinks */,
+				B05336C727C157D8000F9FF1 /* Services */,
+				B0936B1B27BAFEBA00D155A1 /* Modules */,
+			);
+			path = CoreFeature;
+			sourceTree = "<group>";
+		};
+		B0936AFE27BAF8CB00D155A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0936B1927BAFE3D00D155A1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B046374827BD452400C60D4F /* Assembly */,
+				B05336DA27C2C7D6000F9FF1 /* Interactor */,
+				B046374227BD434200C60D4F /* Presenter */,
+				B046374127BD433D00C60D4F /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B0936B1A27BAFE8200D155A1 /* DeepLinks */ = {
+			isa = PBXGroup;
+			children = (
+				B0936AFC27BAF8AC00D155A1 /* ItemShowDeepLink.swift */,
+				B0936B1127BAFB2200D155A1 /* ItemShowDeepLinkHandler.swift */,
+				B053456B27C3A012000F9FF1 /* TermsShowDeepLink.swift */,
+				B053456D27C3A077000F9FF1 /* TermsShowDeepLinkHandler.swift */,
+			);
+			path = DeepLinks;
+			sourceTree = "<group>";
+		};
+		B0936B1B27BAFEBA00D155A1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B0936B1927BAFE3D00D155A1 /* Main */,
+				B053452827C38B52000F9FF1 /* Terms */,
+				B053452727C38B42000F9FF1 /* InactiveItem */,
+				B053452427C38B20000F9FF1 /* ActiveItem */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B0936B2F27BB080100D155A1 /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				B0936AC727BAF60800D155A1 /* DependencyContainer.swift */,
+				B0936AC827BAF60800D155A1 /* DependencyContainerImpl.swift */,
+				B0936B2727BB073800D155A1 /* MakeDependencyContainer.swift */,
+				B07BF9EB27C1176600DED8DB /* DependencyContainerError.swift */,
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+		B0936B4927BB08F800D155A1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B0936AC527BAF60800D155A1 /* AnyType.swift */,
+				B0936ACA27BAF60800D155A1 /* String+Extensions.swift */,
+				B046374D27BD45CE00C60D4F /* DisposeBag.swift */,
+				B046375127BD4B7E00C60D4F /* DisposeBagHolder.swift */,
+				B046374F27BD4B7300C60D4F /* DefaultDisposeBag.swift */,
+				B046375327BD4FEB00C60D4F /* MessageDisplayable.swift */,
+				B05336D627C2BDE3000F9FF1 /* ClosureDismissable.swift */,
+				B05336D827C2BE75000F9FF1 /* NoopDismissable.swift */,
+				B05336D427C2BDB2000F9FF1 /* Dismissable.swift */,
+				B046615B27BD67C700C60D4F /* WeakMessageDisplayable.swift */,
+				B046615327BD50A600C60D4F /* ActivityDisplayable.swift */,
+				B046615D27BD6F0E00C60D4F /* WeakActivityDisplayable.swift */,
+				B081F12327BD95AE0054A09E /* ContentReloadable.swift */,
+				B081F7AE27BD96590054A09E /* WeakContentReloadable.swift */,
+				B05336C527C15322000F9FF1 /* URL+Extensions.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -57,7 +706,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0936AAA27BAF51B00D155A1 /* DeepLinks.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936B2927BB080100D155A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936B4327BB08F800D155A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,14 +734,75 @@
 				B0936AA227BAF51A00D155A1 /* Sources */,
 				B0936AA327BAF51A00D155A1 /* Frameworks */,
 				B0936AA427BAF51A00D155A1 /* Resources */,
+				B0936B6027BB096000D155A1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0936B3C27BB084D00D155A1 /* PBXTargetDependency */,
+				B0936B5F27BB095F00D155A1 /* PBXTargetDependency */,
+			);
+			name = DeepLinks;
+			productName = DeepLinks;
+			productReference = B0936AA627BAF51B00D155A1 /* DeepLinks.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B0936AE027BAF74500D155A1 /* DeepLinksDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0936AF227BAF74900D155A1 /* Build configuration list for PBXNativeTarget "DeepLinksDemo" */;
+			buildPhases = (
+				B0936ADD27BAF74500D155A1 /* Sources */,
+				B0936ADE27BAF74500D155A1 /* Frameworks */,
+				B0936ADF27BAF74500D155A1 /* Resources */,
+				B0936B0E27BAF9C900D155A1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0936B0D27BAF9C900D155A1 /* PBXTargetDependency */,
+				B0936B3327BB080100D155A1 /* PBXTargetDependency */,
+				B0936B4D27BB08F900D155A1 /* PBXTargetDependency */,
+			);
+			name = DeepLinksDemo;
+			productName = DeepLinksDemo;
+			productReference = B0936AE127BAF74500D155A1 /* DeepLinksDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0936B2D27BB080100D155A1 /* DependencyContainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0936B3627BB080200D155A1 /* Build configuration list for PBXNativeTarget "DependencyContainer" */;
+			buildPhases = (
+				B0936B2927BB080100D155A1 /* Headers */,
+				B0936B2A27BB080100D155A1 /* Sources */,
+				B0936B2B27BB080100D155A1 /* Frameworks */,
+				B0936B2C27BB080100D155A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0936B5A27BB092600D155A1 /* PBXTargetDependency */,
+			);
+			name = DependencyContainer;
+			productName = DependencyContainer;
+			productReference = B0936B2E27BB080100D155A1 /* DependencyContainer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B0936B4727BB08F800D155A1 /* Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0936B5027BB08F900D155A1 /* Build configuration list for PBXNativeTarget "Core" */;
+			buildPhases = (
+				B0936B4327BB08F800D155A1 /* Headers */,
+				B0936B4427BB08F800D155A1 /* Sources */,
+				B0936B4527BB08F800D155A1 /* Frameworks */,
+				B0936B4627BB08F800D155A1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DeepLinks;
-			productName = DeepLinks;
-			productReference = B0936AA627BAF51B00D155A1 /* DeepLinks.framework */;
+			name = Core;
+			productName = Core;
+			productReference = B0936B4827BB08F800D155A1 /* Core.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -89,9 +812,20 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					B0936AA527BAF51A00D155A1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					B0936AE027BAF74500D155A1 = {
+						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+					};
+					B0936B2D27BB080100D155A1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					B0936B4727BB08F800D155A1 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -110,12 +844,38 @@
 			projectRoot = "";
 			targets = (
 				B0936AA527BAF51A00D155A1 /* DeepLinks */,
+				B0936AE027BAF74500D155A1 /* DeepLinksDemo */,
+				B0936B2D27BB080100D155A1 /* DependencyContainer */,
+				B0936B4727BB08F800D155A1 /* Core */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B0936AA427BAF51A00D155A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936ADF27BAF74500D155A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0936AF027BAF74900D155A1 /* LaunchScreen.storyboard in Resources */,
+				B0936AED27BAF74900D155A1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936B2C27BB080100D155A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936B4627BB08F800D155A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,10 +889,174 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0936AD227BAF60800D155A1 /* DeepLinkHandlersRegistrarHelper.swift in Sources */,
+				B07BF9E627C10D5E00DED8DB /* DeepLinkHandlerDependencies.swift in Sources */,
+				B046373C27BD353700C60D4F /* ClosureDeepLinkHandlerForDeepLinkFactory.swift in Sources */,
+				B07BF9E427C10D4F00DED8DB /* DeepLinkHandlerBuilderArgs.swift in Sources */,
+				B046615A27BD673B00C60D4F /* WeakDeepLinkCompletionHandler.swift in Sources */,
+				B0936ACF27BAF60800D155A1 /* DeepLinkHandlersRegistrar.swift in Sources */,
+				B05336D127C26A72000F9FF1 /* DeepLinkHandlerForDeepLinkUriFactoryImpl.swift in Sources */,
+				B0936AD627BAF60800D155A1 /* DeepLinkHandlingService.swift in Sources */,
+				B0936ACB27BAF60800D155A1 /* ClosureDeepLinkHandlerForDeepLinkUriFactory.swift in Sources */,
+				B0936B2327BB016600D155A1 /* DeepLinkHandlersRegistrarProcessorImpl.swift in Sources */,
+				B0936AD827BAF60800D155A1 /* DeepLinkHandlerFactoryRegistry.swift in Sources */,
+				B05336CF27C26130000F9FF1 /* DeepLinkUri+Extensions.swift in Sources */,
+				B0936AD327BAF60800D155A1 /* DeepLinkUri.swift in Sources */,
+				B0936AD527BAF60800D155A1 /* DeepLinkHandlingServiceImpl.swift in Sources */,
+				B0936ACC27BAF60800D155A1 /* DeepLinkHandlerForDeepLinkUriFactory.swift in Sources */,
+				B0936AD027BAF60800D155A1 /* DeepLink.swift in Sources */,
+				B0936B2127BB014300D155A1 /* DeepLinkHandlersRegistrarProcessor.swift in Sources */,
+				B0936AD127BAF60800D155A1 /* DeepLinkHandlersRegistrarHelperImpl.swift in Sources */,
+				B07BF9E827C10FB600DED8DB /* DeepLinkHandlerBuilderArgsFactory.swift in Sources */,
+				B07BF9EA27C1173000DED8DB /* DeepLinksError.swift in Sources */,
+				B0936ACD27BAF60800D155A1 /* DeepLinkHandlingServiceFactory.swift in Sources */,
+				B046615627BD50E300C60D4F /* DeepLinkCompletionHandler.swift in Sources */,
+				B046615827BD665E00C60D4F /* DeepLinkCompletionArgs.swift in Sources */,
+				B0936AD427BAF60800D155A1 /* DeepLinkHandler.swift in Sources */,
+				B0936ACE27BAF60800D155A1 /* DeepLinkHandlingServiceFactoryImpl.swift in Sources */,
+				B05336D327C26AD3000F9FF1 /* DeepLinkHandlerForDeepLinkFactoryImpl.swift in Sources */,
+				B0936AD727BAF60800D155A1 /* DeepLinkHandlerFactoryRegistryImpl.swift in Sources */,
+				B046616027BD756800C60D4F /* WeakDeepLinkHandlingService.swift in Sources */,
+				B046373E27BD356200C60D4F /* DeepLinkHandlerForDeepLinkFactory.swift in Sources */,
+				B0936B2627BB023700D155A1 /* RegisterDependencies.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936ADD27BAF74500D155A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0936B1727BAFD1900D155A1 /* DeepLinkHandlersRegistrarsProvider.swift in Sources */,
+				B053453827C38F12000F9FF1 /* ActiveItemModule.swift in Sources */,
+				B0936AFA27BAF79000D155A1 /* AppDelegate.swift in Sources */,
+				B05336E527C2CC50000F9FF1 /* ItemsServiceImpl.swift in Sources */,
+				B053454F27C39B74000F9FF1 /* InactiveItemViewController.swift in Sources */,
+				B053453027C38C41000F9FF1 /* AssembledModule.swift in Sources */,
+				B053456A27C39FA4000F9FF1 /* TermsOpenerImpl.swift in Sources */,
+				B053454D27C39B69000F9FF1 /* InactiveItemView.swift in Sources */,
+				B053455C27C39D4F000F9FF1 /* TermsView.swift in Sources */,
+				B053456827C39F24000F9FF1 /* TermsOpener.swift in Sources */,
+				B05336DF27C2CA1D000F9FF1 /* Item.swift in Sources */,
+				B053454927C39B0C000F9FF1 /* InactiveItemAssembly.swift in Sources */,
+				B053456427C39E08000F9FF1 /* TermsAssembly.swift in Sources */,
+				B053455127C39BA6000F9FF1 /* InactiveItemPresenter.swift in Sources */,
+				B053456E27C3A077000F9FF1 /* TermsShowDeepLinkHandler.swift in Sources */,
+				B053452327C3888D000F9FF1 /* BaseOpener.swift in Sources */,
+				B05336EA27C2D32F000F9FF1 /* MainViewData.swift in Sources */,
+				B053452E27C38C22000F9FF1 /* ActiveItemAssembly.swift in Sources */,
+				B0936B1427BAFB3600D155A1 /* DeepLinkHandlersRegistrar.swift in Sources */,
+				B053453627C38F00000F9FF1 /* ActiveItemPresenter.swift in Sources */,
+				B0936AFD27BAF8AC00D155A1 /* ItemShowDeepLink.swift in Sources */,
+				B0936AF927BAF79000D155A1 /* MainViewController.swift in Sources */,
+				B053456627C39E0E000F9FF1 /* TermsAssemblyImpl.swift in Sources */,
+				B053454427C39748000F9FF1 /* BaseViewController.swift in Sources */,
+				B053454227C392B7000F9FF1 /* ActiveItemOpenerImpl.swift in Sources */,
+				B053455327C39BB1000F9FF1 /* InactiveItemModule.swift in Sources */,
+				B053454B27C39B15000F9FF1 /* InactiveItemAssemblyImpl.swift in Sources */,
+				B053454027C3920A000F9FF1 /* ActiveItemOpener.swift in Sources */,
+				B053455E27C39D78000F9FF1 /* TermsViewController.swift in Sources */,
+				B046374527BD441100C60D4F /* MainPresenter.swift in Sources */,
+				B0936AF827BAF79000D155A1 /* SceneDelegate.swift in Sources */,
+				B046374727BD443500C60D4F /* MainView.swift in Sources */,
+				B0936B1227BAFB2200D155A1 /* ItemShowDeepLinkHandler.swift in Sources */,
+				B05336E127C2CBD5000F9FF1 /* ItemStatus.swift in Sources */,
+				B05336E727C2CD38000F9FF1 /* MainInteractorImpl.swift in Sources */,
+				B053453B27C38F28000F9FF1 /* ActiveItemView.swift in Sources */,
+				B0936B1F27BB009F00D155A1 /* DeepLinkHandlersRegistrarsProviderImpl.swift in Sources */,
+				B053455527C39BF2000F9FF1 /* InactiveItemOpener.swift in Sources */,
+				B053456027C39DAF000F9FF1 /* TermsPresenter.swift in Sources */,
+				B046374A27BD452E00C60D4F /* MainAssembly.swift in Sources */,
+				B05336E327C2CC49000F9FF1 /* ItemsService.swift in Sources */,
+				B046374C27BD456900C60D4F /* MainAssemblyImpl.swift in Sources */,
+				B053453D27C38F39000F9FF1 /* ActiveItemViewController.swift in Sources */,
+				B053456C27C3A012000F9FF1 /* TermsShowDeepLink.swift in Sources */,
+				B0936B6227BB0A2C00D155A1 /* RegisterDependencies.swift in Sources */,
+				B053455727C39C04000F9FF1 /* InactiveItemOpenerImpl.swift in Sources */,
+				B053453227C38C91000F9FF1 /* MainModule.swift in Sources */,
+				B053456227C39DBA000F9FF1 /* TermsModule.swift in Sources */,
+				B05336DC27C2CA0A000F9FF1 /* MainInteractor.swift in Sources */,
+				B053453427C38DA9000F9FF1 /* ActiveItemAssemblyImpl.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936B2A27BB080100D155A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0936B4127BB086800D155A1 /* DependencyContainerImpl.swift in Sources */,
+				B07BF9EC27C1176600DED8DB /* DependencyContainerError.swift in Sources */,
+				B0936B3F27BB086800D155A1 /* MakeDependencyContainer.swift in Sources */,
+				B0936B4027BB086800D155A1 /* DependencyContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0936B4427BB08F800D155A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B081F7AF27BD96590054A09E /* WeakContentReloadable.swift in Sources */,
+				B046375027BD4B7300C60D4F /* DefaultDisposeBag.swift in Sources */,
+				B046615427BD50A600C60D4F /* ActivityDisplayable.swift in Sources */,
+				B0936B5627BB090D00D155A1 /* AnyType.swift in Sources */,
+				B046375427BD4FEB00C60D4F /* MessageDisplayable.swift in Sources */,
+				B05336C627C15322000F9FF1 /* URL+Extensions.swift in Sources */,
+				B0936B5527BB090D00D155A1 /* String+Extensions.swift in Sources */,
+				B046375227BD4B7E00C60D4F /* DisposeBagHolder.swift in Sources */,
+				B05336D527C2BDB2000F9FF1 /* Dismissable.swift in Sources */,
+				B081F12427BD95AE0054A09E /* ContentReloadable.swift in Sources */,
+				B046615C27BD67C700C60D4F /* WeakMessageDisplayable.swift in Sources */,
+				B046615E27BD6F0E00C60D4F /* WeakActivityDisplayable.swift in Sources */,
+				B05336D927C2BE75000F9FF1 /* NoopDismissable.swift in Sources */,
+				B05336D727C2BDE3000F9FF1 /* ClosureDismissable.swift in Sources */,
+				B046374E27BD45CE00C60D4F /* DisposeBag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0936B0D27BAF9C900D155A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0936AA527BAF51A00D155A1 /* DeepLinks */;
+			targetProxy = B0936B0C27BAF9C900D155A1 /* PBXContainerItemProxy */;
+		};
+		B0936B3327BB080100D155A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0936B2D27BB080100D155A1 /* DependencyContainer */;
+			targetProxy = B0936B3227BB080100D155A1 /* PBXContainerItemProxy */;
+		};
+		B0936B3C27BB084D00D155A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0936B2D27BB080100D155A1 /* DependencyContainer */;
+			targetProxy = B0936B3B27BB084D00D155A1 /* PBXContainerItemProxy */;
+		};
+		B0936B4D27BB08F900D155A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0936B4727BB08F800D155A1 /* Core */;
+			targetProxy = B0936B4C27BB08F900D155A1 /* PBXContainerItemProxy */;
+		};
+		B0936B5A27BB092600D155A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0936B4727BB08F800D155A1 /* Core */;
+			targetProxy = B0936B5927BB092600D155A1 /* PBXContainerItemProxy */;
+		};
+		B0936B5F27BB095F00D155A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0936B4727BB08F800D155A1 /* Core */;
+			targetProxy = B0936B5E27BB095F00D155A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0936AEE27BAF74900D155A1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0936AEF27BAF74900D155A1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B0936AAB27BAF51B00D155A1 /* Debug */ = {
@@ -313,6 +1237,177 @@
 			};
 			name = Release;
 		};
+		B0936AF327BAF74900D155A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C86W86WADT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeepLinksDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.restermans.DeepLinksDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0936AF427BAF74900D155A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C86W86WADT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeepLinksDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.restermans.DeepLinksDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B0936B3727BB080200D155A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C86W86WADT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.restermans.DependencyContainer;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0936B3827BB080200D155A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C86W86WADT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.restermans.DependencyContainer;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B0936B5127BB08F900D155A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C86W86WADT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.restermans.Core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0936B5227BB08F900D155A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C86W86WADT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.restermans.Core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -330,6 +1425,33 @@
 			buildConfigurations = (
 				B0936AAE27BAF51B00D155A1 /* Debug */,
 				B0936AAF27BAF51B00D155A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0936AF227BAF74900D155A1 /* Build configuration list for PBXNativeTarget "DeepLinksDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0936AF327BAF74900D155A1 /* Debug */,
+				B0936AF427BAF74900D155A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0936B3627BB080200D155A1 /* Build configuration list for PBXNativeTarget "DependencyContainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0936B3727BB080200D155A1 /* Debug */,
+				B0936B3827BB080200D155A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0936B5027BB08F900D155A1 /* Build configuration list for PBXNativeTarget "Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0936B5127BB08F900D155A1 /* Debug */,
+				B0936B5227BB08F900D155A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
